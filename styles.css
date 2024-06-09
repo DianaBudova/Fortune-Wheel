@@ -25,7 +25,7 @@
     border-radius: 0 10px 0 0;
     background-color: black;
     color: rgb(185,167,119);
-    padding: 9px 20px 9px 60px;
+    padding: 9px 20px 9px 50px;
     font-size: 19px;
 }
 
@@ -33,7 +33,7 @@
     border-radius: 0 0 10px 0;
     background-color: rgb(185,167,119);
     color: black;
-    padding: 3px 20px 5px 60px;
+    padding: 3px 20px 5px 50px;
     font-size: 13px;
 }
 
@@ -75,23 +75,86 @@
     }
 }
 
+/* Modal */
+.modal-dialog {
+    max-width: 900px;
+    position: relative;
+}
+
+.modal-bg-fortune {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(modal-bg-black.png);
+    z-index: 1;
+}
+
 .modal-content-fortune {
     background-color: white;
+    border-radius: 10px;
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#fortuneModal .fortune-form-text-light {
+    background-color: rgb(182, 168, 121);
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    font-size: 20px;
+}
+
+#fortuneModal .fortune-form-text-dark {
+    background-color: black;
+    color:rgb(182, 168, 121);
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+}
+
+#fortuneModal .fortune-form-text {
+    text-align: center;
+    font-weight: 500;
+}
+
+#fortuneModal .fortune-form-text input {
+    border-radius: 5px;
+    border: 2px solid rgb(91, 91, 91);
+    padding: 5px 20px;
+}
+
+#fortuneModal .fortune-form-text input[type="button"] {
+    border: 0;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+}
+
+#fortuneModal .fortune-form-text a {
+    color: black;
+    font-weight: 400;
 }
 
 /* Modal Fortune Wheel */
 .fortune-container {
-    width: 300px;
+    width: 400px;
+    margin: 1rem 0 1rem 2rem;
 }
 
 .fortune-container .fortune-container-first {
     border: 4px solid rgb(243,244,243);
-    border-radius: 150px;
+    border-radius: 300px;
 }
 
 .fortune-container .fortune-container-second {
     border: 4px solid rgb(197,197,197);
-    border-radius: 150px;
+    border-radius: 300px;
 }
 
 :where(.ui-wheel-of-fortune) {
@@ -104,7 +167,7 @@
     position: relative;
     width: 100%;
     border: 3px solid black !important;
-    border-radius: 150px;
+    border-radius: 300px;
     font-weight: 700;
 
     &::after {

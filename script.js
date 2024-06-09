@@ -6,7 +6,7 @@ function wheelOfFortune(selector) {
     const node = document.querySelector(selector);
     if (!node) return;
 
-    const spin = node.querySelector("button");
+    const spin = document.getElementsByClassName("spin-button")[0];
     const wheel = node.querySelector("ul");
     let animation;
     let previousEndDegree = 0;

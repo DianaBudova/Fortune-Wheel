@@ -13,7 +13,8 @@
 <body>
     <!-- Button trigger modal -->
     <div class="fortune-modal-btn-container">
-        <button type="button" class="fortune-modal-close-btn btn-close" data-bs-dismiss="trigger" aria-label="Close"></button>
+        <button type="button" class="fortune-modal-close-btn btn-close" data-bs-dismiss="trigger"
+            aria-label="Close"></button>
         <div type="button" class="btn" data-bs-toggle="modal" data-bs-target="#fortuneModal">
             <div class="fortune-modal-btn">
                 <div class="fortune-container-modal">
@@ -81,68 +82,105 @@
     <!-- Modal -->
     <div class="modal fade" id="fortuneModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
+            <div class="modal-bg-fortune"></div>
             <div class="modal-content modal-content-fortune">
                 <div class="modal-header border-0">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="fortune-container">
-                        <div class="fortune-container-first">
-                            <div class="fortune-container-second">
-                                <fieldset class="ui-wheel-of-fortune ui-wheel-of-fortune-large">
-                                    <ul>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 0.5rem;">5000 ₴</span>
-                                        </li>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 1rem;">10 %</span>
-                                        </li>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 1rem;">5 %</span>
-                                        </li>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 1rem;">500 ₴</span>
-                                        </li>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 1rem;">450 ₴</span>
-                                        </li>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 1rem;">400 ₴</span>
-                                        </li>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 1rem;">350 ₴</span>
-                                        </li>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 1rem;">300 ₴</span>
-                                        </li>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 1rem;">200 ₴</span>
-                                        </li>
-                                        <li>
-                                            <span>ЗНИЖКА</span>
-                                            <span style="padding-left: 1rem;">100 ₴</span>
-                                        </li>
-                                    </ul>
-                                    <button type="button"></button>
-                                </fieldset>
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-md-auto d-flex justify-content-center align-items-center">
+                            <div class="fortune-container" style="z-index: 2">
+                                <div class="fortune-container-first">
+                                    <div class="fortune-container-second">
+                                        <fieldset class="ui-wheel-of-fortune ui-wheel-of-fortune-large">
+                                            <ul>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 0.5rem;">5000 ₴</span>
+                                                </li>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 1rem;">10 %</span>
+                                                </li>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 1rem;">5 %</span>
+                                                </li>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 1rem;">500 ₴</span>
+                                                </li>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 1rem;">450 ₴</span>
+                                                </li>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 1rem;">400 ₴</span>
+                                                </li>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 1rem;">350 ₴</span>
+                                                </li>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 1rem;">300 ₴</span>
+                                                </li>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 1rem;">200 ₴</span>
+                                                </li>
+                                                <li>
+                                                    <span>ЗНИЖКА</span>
+                                                    <span style="padding-left: 1rem;">100 ₴</span>
+                                                </li>
+                                            </ul>
+                                            <button type="button" style="cursor: default;"></button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="fortune-form-text-light">
+                                <i>
+                                    <p class="m-0">ОТРИМАЙ</p>
+                                    <p class="m-0">ГАРАНТОВАНУ ЗНИЖКУ!</p>
+                                </i>
+                            </div>
+                            <div class="fortune-form-text-dark">
+                                <i>
+                                    <p class="m-0">ТА АВТОМАТИЧНО БЕРІТЬ УЧАСТЬ</p>
+                                    <p>У РОЗІГРАШІ FPV-ДРОНУ!</p>
+                                </i>
+                            </div>
+                            <div class="fortune-form-text">
+                                <p class="m-0">Крути колесо фортуни</p>
+                                <p>та отримуй свій подарунок!</p>
+                                <form action="">
+                                    <div class="form-group mb-2">
+                                        <input type="text" placeholder="Ім'я">
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <input type="text" placeholder="Мобільний телефон">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input type="text" placeholder="E-mail">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="button" class="spin-button py-2" value="Крутити колесо!">
+                                    </div>
+                                    <a href="">Детальніше про розіграш</a>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
+
         </div>
     </div>
 
