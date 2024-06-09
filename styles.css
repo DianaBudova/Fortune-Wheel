@@ -1,0 +1,228 @@
+/* Popup Fortune Wheel */
+.fortune-modal-btn-container {
+    position: absolute;
+    top: 3%;
+    right: 0;
+}
+
+.fortune-modal-btn {
+    padding: 0;
+    border: 0;
+    position: relative;
+    font-weight: 700;
+    text-align: left;
+}
+
+.fortune-modal-close-btn {
+    position: absolute;
+    top: -15%;
+    right: 5%;
+    font-size: 13px;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23B9A777'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+
+.fortune-modal-btn .spin-fortune {
+    border-radius: 0 10px 0 0;
+    background-color: black;
+    color: rgb(185,167,119);
+    padding: 9px 20px 9px 60px;
+    font-size: 19px;
+}
+
+.fortune-modal-btn .spin-description {
+    border-radius: 0 0 10px 0;
+    background-color: rgb(185,167,119);
+    color: black;
+    padding: 3px 20px 5px 60px;
+    font-size: 13px;
+}
+
+.fortune-container-modal {
+    width: 100px;
+    position: absolute;
+    left: -25%;
+    top: 0;
+}
+
+.fortune-container-modal .fortune-container-first {
+    border: 2px solid rgb(243,244,243);
+    border-radius: 150px;
+}
+
+.fortune-container-modal .fortune-container-second {
+    border: 2px solid rgb(197,197,197);
+    border-radius: 150px;
+}
+
+.fortune-container-modal :where(.ui-wheel-of-fortune) {
+    border: 1px solid black !important;
+
+    &::after {
+        top: -5px;
+    }
+
+    &::before {
+        top: -5px;
+    }
+
+    button {
+        border: 2px solid rgb(182, 168, 117);
+        box-shadow: 0px 0px 5px 1px rgb(0, 0, 0, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        place-self: center;
+        width: 15cqi;
+    }
+}
+
+.modal-content-fortune {
+    background-color: white;
+}
+
+/* Modal Fortune Wheel */
+.fortune-container {
+    width: 300px;
+}
+
+.fortune-container .fortune-container-first {
+    border: 4px solid rgb(243,244,243);
+    border-radius: 150px;
+}
+
+.fortune-container .fortune-container-second {
+    border: 4px solid rgb(197,197,197);
+    border-radius: 150px;
+}
+
+:where(.ui-wheel-of-fortune) {
+    --_items: 10;
+    all: unset;
+    aspect-ratio: 1 / 1;
+    container-type: inline-size;
+    direction: ltr;
+    display: grid;
+    position: relative;
+    width: 100%;
+    border: 3px solid black !important;
+    border-radius: 150px;
+    font-weight: 700;
+
+    &::after {
+        aspect-ratio: 1/cos(30deg);
+        background-color: rgb(237, 220, 163);
+        clip-path: polygon(50% 100%, 100% 0, 0 0);
+        content: "";
+        height: 4cqi;
+        width: 5cqi;
+        position: absolute;
+        place-self: start center;
+        scale: 2.5;
+        top: -15px;
+    }
+
+    &::before {
+        aspect-ratio: 1/cos(30deg);
+        background-color: rgb(187,184,182);
+        content: "";
+        height: 4cqi;
+        width: 5cqi;
+        position: absolute;
+        place-self: start center;
+        scale: 2.5;
+        top: -15px;
+    }
+
+    &>* {
+        position: absolute;
+    }
+
+    button {
+        aspect-ratio: 1 / 1;
+        background-color: white;
+        border: 5px solid rgb(182, 168, 117);
+        box-shadow: 0px 0px 5px 1px rgb(0, 0, 0, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        place-self: center;
+        width: 20cqi;
+    }
+
+    ul {
+        all: unset;
+        clip-path: inset(0 0 0 0 round 50%);
+        display: grid;
+        inset: 0;
+        place-content: center start;
+
+        li {
+            align-content: center;
+            aspect-ratio: 1 / calc(2 * tan(180deg / var(--_items)));
+            background: hsl(calc(360deg / var(--_items) * calc(var(--_idx))), 100%, 75%);
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+            display: grid;
+            font-size: 5cqi;
+            grid-area: 1 / -1;
+            padding-left: 1ch;
+            rotate: calc(360deg / var(--_items) * calc(var(--_idx) - 1));
+            transform-origin: center right;
+            user-select: none;
+            width: 50cqi;
+
+            &:nth-of-type(1) {
+                --_idx: 1;
+                background-color: white;
+                font-size: 5.5cqi;
+            }
+
+            &:nth-of-type(2) {
+                --_idx: 2;
+                background-color: black;
+                color: rgb(182, 168, 117);
+            }
+
+            &:nth-of-type(3) {
+                --_idx: 3;
+                background-color: rgb(182, 168, 117);
+            }
+
+            &:nth-of-type(4) {
+                --_idx: 4;
+                background-color: black;
+                color: rgb(182, 168, 117);
+            }
+
+            &:nth-of-type(5) {
+                --_idx: 5;
+                background-color: rgb(182, 168, 117);
+            }
+
+            &:nth-of-type(6) {
+                --_idx: 6;
+                background-color: black;
+                color: rgb(182, 168, 117);
+            }
+
+            &:nth-of-type(7) {
+                --_idx: 7;
+                background-color: rgb(182, 168, 117);
+            }
+
+            &:nth-of-type(8) {
+                --_idx: 8;
+                background-color: black;
+                color: rgb(182, 168, 117);
+            }
+
+            &:nth-of-type(9) {
+                --_idx: 9;
+                background-color: rgb(182, 168, 117);
+            }
+
+            &:nth-of-type(10) {
+                --_idx: 10;
+                background-color: black;
+                color: rgb(182, 168, 117);
+            }
+        }
+    }
+}
